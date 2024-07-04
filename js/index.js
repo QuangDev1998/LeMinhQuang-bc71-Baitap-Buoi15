@@ -120,5 +120,5 @@ function calculateFee() {
     fee += 50 * premiumChannels; // 50$ cho mỗi kênh cao cấp
   }
 
-  document.getElementById("result").innerText = "Tổng phí: $" + fee.toFixed(2);
+  document.getElementById("tinhToan").innerText = "Tổng phí: $" + fee.toFixed(2);
 }

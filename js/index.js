@@ -14,7 +14,7 @@ function ex1() {
   );
 
 
-  if (diemMonThu1 == 0 || diemMonThu1 == 0 || diemMonThu3 == 0) {
+  if (diemMonThu1 == 0 || diemMonThu2 == 0 || diemMonThu3 == 0) {
     document.getElementById(
       "Result"
     ).innerHTML = `Bạn đã rớt do có điểm nhỏ hơn hoặc bằng 0 `;

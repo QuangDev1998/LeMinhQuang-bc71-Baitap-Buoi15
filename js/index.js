@@ -80,7 +80,7 @@ function ex3() {
     thueThuNhapCaNhan = thuNhapChiuThue * (10 / 100);
   } else if (120e+6 < thuNhapChiuThue && thuNhapChiuThue <= 210e+6) {
     thueThuNhapCaNhan = thuNhapChiuThue * (15 / 100);
-    console.log(thueThuNhapCaNhan);
+
   } else if (210e+6 < thuNhapChiuThue && thuNhapChiuThue <= 384e+6) {
     thueThuNhapCaNhan = thuNhapChiuThue * (20 / 100);
   } else if (384e+6 < thuNhapChiuThue && thuNhapChiuThue <= 624e+6) {
@@ -89,7 +89,7 @@ function ex3() {
     thueThuNhapCaNhan = thuNhapChiuThue * (30 / 100);
   } else {
     thueThuNhapCaNhan = thuNhapChiuThue * (35 / 100);
-    console.log(thueThuNhapCaNhan)
+
   }
 
   document.getElementById("tinhTienThue").innerHTML = `Họ Tên : ${hoTen} 

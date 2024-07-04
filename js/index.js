@@ -12,8 +12,13 @@ function ex1() {
   tongDiem = Math.round(
     diemMonThu1 + diemMonThu2 + diemMonThu3 + chonKhuVuc + chonDoiTuong
   );
-  console.log(tongDiem);
-  if (tongDiem >= diemChuan) {
+
+
+  if (diemMonThu1 == 0 || diemMonThu1 == 0 || diemMonThu3 == 0) {
+    document.getElementById(
+      "Result"
+    ).innerHTML = `Bạn đã rớt do có điểm nhỏ hơn hoặc bằng 0 `;
+  } else if (tongDiem >= diemChuan) {
     document.getElementById(
       "Result"
     ).innerHTML = `Bạn đã đậu - Tổng Diểm : ${tongDiem}`;

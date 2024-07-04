@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h3>Bài tập quản lý tuyển sinh</h3>
+      <div class="row">
+        <div class="col-4">
+          <input
+            class="form-control"
+            id="diemChuan"
+            type="number"
+            placeholder="Điểm chuẩn"
+          />
+        </div>
+        <div class="col-4">
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            id="chonkhuvuc"
+          >
+            <option selected value="0">Chọn khu vực</option>
+            <option value="2">A</option>
+            <option value="1">B</option>
+            <option value="0.5">C</option>
+          </select>
+        </div>
+        <div class="col-4">
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            id="chondoituong"
+          >
+            <option selected value="0">Chọn đối tượng</option>
+            <option value="2.5">1</option>
+            <option value="1.5">2</option>
+            <option value="1">3</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <input
+            class="form-control"
+            id="diemMonThu1"
+            type="number"
+            placeholder="Điểm môn thứ 1"
+          />
+        </div>
+        <div class="col-4">
+          <input
+            class="form-control"
+            id="diemMonThu2"
+            type="number"
+            placeholder="Điểm môn thứ 2"
+          />
+        </div>
+        <div class="col-4">
+          <input
+            class="form-control"
+            id="diemMonThu3"
+            type="number"
+            placeholder="Điểm môn thứ 3"
+          />
+        </div>
+      </div>
+      <button class="btn btn-success mt-2" onclick="ex1()">Kết Qủa</button>
+      <div class="form-group">
+        <p class="alert alert-success" id="Result"></p>
+      </div>
+    </div>
+
+    <!-- bài tập 2  -->
+    <div class="container">
+      <h3>Bài tập tính tiền điện</h3>
+
+      <div class="row">
+        <div class="col-3">
+          <div class="mb-3">
+            <label class="form-label"></label>
+            <input
+              class="form-control"
+              id="tenKhachHang"
+              placeholder="Nhập họ tên"
+            />
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="mb-3">
+            <label class="form-label"></label>
+            <input
+              type="numBer"
+              class="form-control"
+              id="soKw"
+              placeholder="Nhập số kw"
+            />
+          </div>
+        </div>
+      </div>
+
+      <button class="btn" onclick="ex2()">Tính tiền điện</button>
+      <div class="form-group">
+        <p class="alert alert-success" id="tinhTienDien"></p>
+      </div>
+    </div>
+    <!-- bài tập 3 -->
+    <div class="container">
+      <h3>Bài Tập Tính Thuế Thu Nhập Cá Nhân</h3>
+      <div class="row">
+        <div class="col-4">
+          <div class="mb-3">
+            <input
+              class="form-control"
+              id="nhapHoTen"
+              placeholder="Nhập Họ Tên"
+            />
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="mb-3">
+            <input
+              type="number"
+              class="form-control"
+              id="tongThuNhapNam"
+              placeholder="Tổng Thu Nhập Năm"
+            />
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="mb-3">
+            <input
+              type="number"
+              class="form-control"
+              id="soNguoiPhuThuoc"
+              placeholder="Số Người Phụ Thuộc"
+            />
+          </div>
+        </div>
+      </div>
+      <button class="btn" onclick="ex3()">Tính Tiền Thuế</button>
+      <div class="form-group">
+        <p class="alert alert-success" id="tinhTienThue"></p>
+      </div>
+    </div>
+    <!-- Bai Tap 4 -->
+    <div class="container">
+      <h3>Tính Toán Phí Cáp</h3>
+      <form id="cableFeeForm">
+        <label for="customerType"></label>
+        <select
+          id="customerType"
+          name="customerType"
+          onchange="toggleConnectionsField()"
+          placeholder="Loại khách hàng:"
+        >
+          <option selected value="0">Chọn loại khách hàng</option>
+          <option value="Residential">Nhà Dân</option>
+          <option value="Business">Doanh Nghiệp</option>
+        </select>
+        <br /><br />
+
+        <label for="customerID"></label>
+        <input
+          type="text"
+          id="customerID"
+          name="customerID"
+          placeholder="Nhập mã khách hàng"
+          required
+        />
+        <br /><br />
+
+        <label for="premiumChannels"></label>
+        <input
+          type="number"
+          id="premiumChannels"
+          name="premiumChannels"
+          required
+          placeholder="Số kênh cao cấp"
+        />
+        <br /><br />
+
+        <div id="connectionsField" class="hidden">
+          <label for="connections"></label>
+          <input
+            type="number"
+            id="connections"
+            name="connections"
+            min="1"
+            placeholder="Số kết nối"
+          />
+          <br /><br />
+        </div>
+
+        <button class="btn" type="button" onclick="calculateFee()">
+          Tính toán
+        </button>
+      </form>
+      <div class="form-group">
+        <p class="alert alert-success" id="tinhToan"></p>
+      </div>
+    </div>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
